@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!--title>{{ title_page }}</title-->
+    <title>Login</title>
+</head>
+
+<body>
+    <!--Nav Start-->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark nav justify-content-center">
+        <!-- Links -->
+        <ul class="navbar-nav pl-4 px-5">
+            <li class="nav-item">
+                <a class="nav-link" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Activity
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">A</a>
+                    <a class="dropdown-item" href="#">B</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">BLOG</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><img
+                        src="../static/Image/profile.png" alt="#Error" class="rounded-circle"
+                        style="height: 35px; width: 35px;">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ url_for('auth_login') }}">Log in</a></li>
+                    <li> <a class="dropdown-item" href="{{ url_for('sign_up') }}">Sign_Up</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!--Nav Ends-->
+
+    <!--About Start-->
+
+    <section>
+        <div class="container-fluid" style="">
+            <div class="row">
+                <div class="log ml-auto py-4">
+                    <img src="../static/Image/login.png" alt="#error" style="height: 500px; width: 600px;">
+                </div>
+                <div class="container col-lg-6 col-md-6 " style=" opacity: 0.7;">
+                    <div>
+                        <form method="post" class="log log-form"
+                            style="font-size: medium; padding: 5%; margin: 15% ; height:40px; width: 70ch;">
+                            <div class="form-w mb-1 mr-5">
+                                <label style="font-family:Verdana, Geneva, Tahoma, sans-serif; color: black;"
+                                    for="email">Email
+                                    Address</label>
+                                <input class="log log-h rounded align-items-center" id="email" name="email" type="email"
+                                    placeholder="Enter Email Address. " />
+                            </div>
+
+                            <div class="form-w mb-3 mr-5">
+                                <label style="font-family:Verdana, Geneva, Tahoma, sans-serif; color: black;"
+                                    for="email">
+                                    Password</label>
+                                <input class="log log-h rounded align-items-center" id="password" name="password"
+                                    type="password" placeholder="Enter Your Password. " />
+                            </div>
+
+                            <div class="mb-auto py-4 text-center">
+                                <button id="forgPass" class="btn btn-primary"
+                                    style="font-family: cursive; font-size: larger;" type="submit">
+                                    LOGIN
+                                </button>
+                            </div>
+                            <hr class="mb-3 border-t" />
+                            <div class="text-center">
+                                <a class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+                                    href="#">
+                                    Create an Account!
+                                </a>
+                            </div>
+                            <div class="text-center">
+                                <a class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+                                    href="#">
+                                    Forget Password.!
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <style>
+            label {
+                position: relative;
+                transform: translateY(6px);
+                left: 13px;
+                color: rgba($white, .5);
+                transition: all 0.25s ease;
+                -webkit-backface-visibility: hidden;
+                pointer-events: none;
+                font-size: 22px;
+            }
+
+            label.active {
+                transform: translateY(50px);
+                left: 2px;
+                font-size: 14px;
+
+            }
+
+            input {
+                font-size: 22px;
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 5px 0px;
+                background: none;
+                background-image: none;
+                border: 1px solid $gray-light;
+                color: $white;
+                border-radius: 0;
+                transition: border-color .25s ease, box-shadow .25s ease;
+
+            }
+
+            .button {
+                border: 0;
+                outline: none;
+                border-radius: 0;
+                padding: 15px 0;
+                font-size: 2rem;
+                font-weight: $bold;
+                text-transform: uppercase;
+                letter-spacing: .1em;
+                background: $main;
+                color: &black;
+                transition: all.5s ease;
+                -webkit-appearance: none;
+            }
+
+            .button-block {
+                display: block;
+                width: 100%;
+            }
+        </style>
+
+    </section>
+
+    <!--About End--><!--Footer Start-->
+
+    <div class="container-fluid text-white py-1 px-sm-3 px-md-5" style="background-color: rgba(81, 41, 43, 0.7);">
+        <div class="row pt-2">
+            <div class="col-lg-4">
+                <h4 class="px-1 py-3 pt-5">Get In Touch</h4>
+                <p><i class="fa fa-map"> ABC, New Delhi, 10023</i></p>
+                <p><i class="fa fa-phone"> +91 22334455</i></p>
+                <p><i class="fa fa-envelope"> Info123@gmail.com</i></p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-info rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="https://twitter.com/i/flow/login"><i
+                            class="fa fa-twitter" style="color: cyan;"></i></a>
+                    <a class="btn btn-outline-info rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="https://www.facebook.com/"><i class="fa fa-facebook-f"
+                            style="color: cyan;"></i></a>
+                    <a class="btn btn-outline-info rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;"
+                        href="https://in.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F"><i
+                            class="fa fa-linkedin" style="color: cyan;"></i></a>
+                    <a class="btn btn-outline-info rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="https://www.instagram.com/"><i class="fa fa-instagram"
+                            style="color: cyan;"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <h4 class="px-1 py-3 pt-5">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a href="#" class="px-2 py-2"
+                        style="color: ghostwhite; font-size: larger; font-family: 'Times New Roman', Times, serif;">Home</a>
+                    <a href="#" class="px-2 py-2"
+                        style="color: ghostwhite; font-size: larger; font-family: 'Times New Roman', Times, serif;">About</a>
+                    <a href="#" class="px-2 py-2"
+                        style="color: ghostwhite;  font-family: 'Times New Roman', Times, serif;">Blog</a>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+                <h4 class="px-1 py-3 pt-5 text-center">Query</h4>
+                <form method="post">
+                    <div class="form-floating mb-3">
+                        <label class="container text-center" style="font-size:x-large; color: ">Name</label>
+                        <input type="name" class="form-control" id="name" placeholder="Name">
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <label class="container text-center" style="font-size:x-large; ">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Example@gmail.com">
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <label class="container text-center" style="font-size:x-large;">Comments</label>
+                        <textarea class="form-control" rows="3" placeholder="Leave a comment here"
+                            id="floatingTextarea"></textarea>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary btn-block" type="button">Button</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer Ends-->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/JS/func.js"></script>
+</body>
+
+</html>

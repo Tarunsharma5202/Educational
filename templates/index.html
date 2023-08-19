@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/CSS/ss.scss">
+    <link rel="stylesheet" href="../static/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--title>{{ title_page }}</title-->
+    <title>HOME</title>
+</head>
+
+<body>
+
+    <!--Nav Start-->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark nav justify-content-center">
+        <!-- Links -->
+        <ul class="navbar-nav pl-4 px-5">
+            <li class="nav-item">
+                <a class="nav-link" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Activity
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">A</a>
+                    <a class="dropdown-item" href="#">B</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">BLOG</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><img
+                        src="../static/Image/profile.png" alt="#Error" class="rounded-circle"
+                        style="height: 35px; width: 35px;">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ url_for('auth_login') }}">Log in</a></li>
+                    <li> <a class="dropdown-item" href="{{ url_for('sign_up') }}">Sign_Up</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!--Nav Ends-->
+
+    <!--Carousel start-->
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../static/Image/carousel/c1.png" alt="#Error" style="height: 500px;  width: 1600px;">
+                <div class="carousel-caption">
+                    <h2 style="font-family: sans-serif;">EDUCATION</h2>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/Image/carousel/c2.png" alt="#Error" style="height: 500px;  width: 1600px;">
+                <div class="carousel-caption">
+                    <h2 style="font-family: sans-serif;">LEARNING</h2>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/Image/carousel/c3.png" alt="#Error" style="height: 500px;  width: 1600px;">
+                <div class="carousel-caption">
+                    <h2 style="color: darkslategrey; font-family: sans-serif ;">CREATING</h2>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <!--Carousel Ends-->
+
+    <!--ABOUT Start-->
+
+    <section>
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="py-2 px-2">
+                    <img src="../static/Image/about.png" alt="#Error" height="600" width="662px">
+                </div>
+                <div class="col-lg-5 py-2 px-2">
+                    <h2 class="container text-center">About Us</h2>
+                    <p class="">Educational websites are online platforms designed to offer learning resources and
+                        content across various subjects. They provide interactive learning experiences through text
+                        articles, videos, quizzes, and more. These websites cater to diverse learning styles and allow
+                        users to learn at their own pace. Many offer certification upon course completion. They often
+                        feature expert instructors, ensuring the accuracy and quality of the provided information.
+                        Educational websites encompass different types, including online course platforms like Coursera
+                        and Udemy, language learning platforms like Duolingo, academic help resources like Khan Academy,
+                        coding learning sites like Codecademy, and open courseware from universities such as MIT
+                        OpenCourseWare. They may also include educational blogs and YouTube channels. Their
+                        effectiveness varies based on content quality and individual preferences. These platforms have
+                        become increasingly popular due to their flexibility and accessibility, enabling learners to
+                        acquire new skills, enhance existing knowledge, and pursue professional development conveniently
+                        through the internet.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--ABOUT Ends-->
+
+    <!--Topics start-->
+
+    <section>
+        <div class="container-fluid">
+            <div class="row justify-content-center py-1 mt-4">
+                <div class="col-lg-6 col-md-8 col text-center mb-4">
+                    <h2 class="text-Dark font-weight-normal text-uppercase">OUR PROJECTS</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 p-1 portfolio-item first">
+                    <div class="position-relative overflow-hidden">
+                        <div class="project-img d-flex align-items-center justify-content-center">
+                            <img class="img-fluid" src="../static/Image/Topic/t1.png" alt="" style="height: 300px; width: 400px;" >
+                        </div>
+                        <div
+                            class="portfolio-text d-flex flex-column align-items-center justify-content-center" style="background-color: rgba(25, 25, 25, 0.6);"">
+                            <h4 class="text-white mb-4">Hacking Project's</h4>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn btn-outline-light m-1" href="">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <a class="btn btn-outline-light m-1" href="../static/Image/Topic/t1.png" target="_blank" data-lightbox="project">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 p-1 py-1 portfolio-item first">
+                    <div class="position-relative overflow-hidden">
+                        <div class="project-img d-flex align-items-center justify-content-center">
+                            <img class="img-fluid" src="../static/Image/Topic/t2.png" alt="" style="height: 300px; width: 400px;">
+                        </div>
+                        <div
+                            class="portfolio-text d-flex flex-column align-items-center justify-content-center" style="background-color: rgba(25, 25, 25, 0.6);"">
+                            <h4 class="text-white mb-4">Business Project's</h4>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn btn-outline-light m-1" href="">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <a class="btn btn-outline-light m-1" href="../static/Image/Topic/t2.png" target="_blank" data-lightbox="project">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 p-1 py-1 portfolio-item first">
+                    <div class="position-relative overflow-hidden">
+                        <div class="project-img d-flex align-items-center justify-content-center">
+                            <img class="img-fluid" src="../static/Image/Topic/t3.png" alt="" style="height: 300px; width: 400px;">
+                        </div>
+                        <div
+                            class="portfolio-text d-flex flex-column align-items-center justify-content-center" style="background-color: rgba(25, 25, 25, 0.6);"">
+                            <h4 class="text-white mb-4">College Project</h4>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn btn-outline-light m-1" href="">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <a class="btn btn-outline-light m-1" href="../static/Image/Topic/t3.png" target="_blank" data-lightbox="project">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 p-1 py-1 portfolio-item first">
+                    <div class="position-relative overflow-hidden">
+                        <div class="project-img d-flex align-items-center justify-content-center">
+                            <img class="img-fluid" src="../static/Image/Topic/t4.png" alt="" style="height: 300px; width: 400px;">
+                        </div>
+                        <div
+                            class="portfolio-text d-flex flex-column align-items-center justify-content-center" style="background-color: rgba(25, 25, 25, 0.6);"">
+                            <h4 class="text-white mb-4">IT Project's </h4>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn btn-outline-light m-1" href="">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <a class="btn btn-outline-light m-1" href="../static/Image/Topic/t4.png" target="_blank" data-lightbox="project">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 p-1 py-1 portfolio-item first">
+                    <div class="position-relative overflow-hidden">
+                        <div class="project-img d-flex align-items-center justify-content-center">
+                            <img class="img-fluid" src="../static/Image/Topic/t5.png" alt="" style="height: 300px; width: 400px;">
+                        </div>
+                        <div
+                            class="portfolio-text d-flex flex-column align-items-center justify-content-center" style="background-color: rgba(25, 25, 25, 0.6);"">
+                            <h4 class="text-white mb-4">School Project's </h4>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn btn-outline-light m-1" href="">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <a class="btn btn-outline-light m-1" href="../static/Image/Topic/t5.png" target="_blank" data-lightbox="project">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 p-1 py-1 portfolio-item first">
+                    <div class="position-relative overflow-hidden">
+                        <div class="project-img d-flex align-items-center justify-content-center">
+                            <img class="img-fluid" src="../static/Image/Topic/t6.png" alt="" style="height: 300px; width: 400px;">
+                        </div>
+                        <div
+                            class="portfolio-text d-flex flex-column align-items-center justify-content-center" style="background-color: rgba(25, 25, 25, 0.6);"">
+                            <h4 class="text-white mb-4"> Data Science Project's </h4>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn btn-outline-light m-1" href="">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <a class="btn btn-outline-light m-1" href="../static/Image/Topic/t6.png" target="_blank" data-lightbox="project">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 p-1 py-1 portfolio-item first">
+                    <div class="position-relative overflow-hidden">
+                        <div class="project-img d-flex align-items-center justify-content-center">
+                            <img class="img-fluid" src="../static/Image/Topic/t7.png" alt="" style="height: 300px; width: 400px;">
+                        </div>
+                        <div
+                            class="portfolio-text d-flex flex-column align-items-center justify-content-center" style="background-color: rgba(25, 25, 25, 0.6);">
+                            <h4 class="text-white mb-4">Media Project's'</h4>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn btn-outline-light m-1" href="">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <a class="btn btn-outline-light m-1" href="../static/Image/Topic/t7.png" target="_blank" data-lightbox="project">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 p-1 py-1 portfolio-item first">
+                    <div class="position-relative overflow-hidden">
+                        <div class="project-img d-flex align-items-center justify-content-center">
+                            <img class="img-fluid" src="../static/Image/Topic/t8.png" alt="" style="height: 300px; width: 400px;">
+                        </div>
+                        <div
+                            class="portfolio-text d-flex flex-column align-items-center justify-content-center" style="background-color:rgba(25, 25, 25, 0.6) ;">
+                            <h4 class="text-white mb-4">AI Project's</h4>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn btn-outline-light m-1" href="">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <a class="btn btn-outline-light m-1" href="../static/Image/Topic/t8.png" target="_blank" data-lightbox="project">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!--Topics Ends-->
+
+    <!--Blog start-->
+
+    <section>
+        <div class="container-fluid px-3">
+            <div class="row justify-content-center py-1 mt-4">
+                <div class="col-lg-6 col-md-8 col text-center mb-4">
+                    <h2 class="text-Dark font-weight-normal text-uppercase"> OUR BLOGS </h2>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+    </section>
+
+    <!--Blog Ends-->
+
+    <!--Footer Start-->
+
+    <div class="container-fluid text-white py-1 px-sm-3 px-md-5" style="background-color: rgba(81, 41, 43, 0.7);">
+        <div class="row pt-2">
+            <div class="col-lg-4">
+                <h4 class="px-1 py-3 pt-5">Get In Touch</h4>
+                <p><i class="fa fa-map"> ABC, New Delhi, 10023</i></p>
+                <p><i class="fa fa-phone"> +91 22334455</i></p>
+                <p><i class="fa fa-envelope"> Info123@gmail.com</i></p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-info rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="https://twitter.com/i/flow/login"><i
+                            class="fa fa-twitter" style="color: cyan;"></i></a>
+                    <a class="btn btn-outline-info rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="https://www.facebook.com/"><i class="fa fa-facebook-f"
+                            style="color: cyan;"></i></a>
+                    <a class="btn btn-outline-info rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;"
+                        href="https://in.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F"><i
+                            class="fa fa-linkedin" style="color: cyan;"></i></a>
+                    <a class="btn btn-outline-info rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="https://www.instagram.com/"><i class="fa fa-instagram"
+                            style="color: cyan;"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <h4 class="px-1 py-3 pt-5">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a href="#" class="px-2 py-2"
+                        style="color: ghostwhite; font-size: larger; font-family: 'Times New Roman', Times, serif;">Home</a>
+                    <a href="#" class="px-2 py-2"
+                        style="color: ghostwhite; font-size: larger; font-family: 'Times New Roman', Times, serif;">About</a>
+                    <a href="#" class="px-2 py-2"
+                        style="color: ghostwhite;  font-family: 'Times New Roman', Times, serif;">Blog</a>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+                <h4 class="px-1 py-3 pt-5 text-center">Query</h4>
+                <form method="post">
+                    <div class="form-floating mb-3">
+                        <label class="container text-center" style="font-size:x-large; color: ">Name</label>
+                        <input type="name" class="form-control" id="name" placeholder="Name">
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <label class="container text-center" style="font-size:x-large; ">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Example@gmail.com">
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <label class="container text-center" style="font-size:x-large;">Comments</label>
+                        <textarea class="form-control" rows="3" placeholder="Leave a comment here"
+                            id="floatingTextarea"></textarea>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary btn-block" type="button">Button</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer Ends-->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/JS/func.js"></script>
+</body>
+
+</html>
